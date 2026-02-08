@@ -1,36 +1,59 @@
-🧪 Selenium Google Search Automation Project
+🧪 QA Automation Framework (Python | Selenium | API)
 📘 Overview
 
-This project is a web automation testing framework built with Python, Selenium WebDriver, and Pytest.
-It automates the Google Search flow, verifying that a search operation returns valid results and that the browser title reflects the search term.
+This project is a QA Automation framework built with Python, covering both UI automation and API automation.
 
-The project follows the Page Object Model (POM) design pattern and demonstrates clean, maintainable test architecture suitable for real-world QA automation.
+It demonstrates real-world QA practices such as Page Object Model, REST API testing (CRUD), positive & negative testing, and HTML reporting.
+
+🧰 Tech Stack
+- Python 3
+- Selenium WebDriver
+- Pytest
+- Requests (API testing)
+- Pytest-HTML (reports)
+- WebDriver Manager
+- GitHub Actions (CI-ready structure)
 
 🚀 Features
+- UI automation using Selenium and Page Object Model (POM)
+- API automation (GET, POST, PUT, DELETE)
+- Positive & negative API testing
+- Explicit waits and stable UI tests
+- HTML reports generation
+- Logs and screenshots on failures
+- Clean and scalable project structure
 
-✅ Automates Google Search (navigates, accepts cookies, enters text, validates title)
-✅ Uses Page Object Model for scalable and readable code
-✅ Implements explicit waits (no sleep) for reliable test execution
-✅ Generates HTML reports automatically via pytest-html
-✅ Fully compatible with GitHub Actions CI/CD pipelines
-✅ Demonstrates QA automation best practices (fixtures, asserts, structure)
+📂 Project Structure
+selenium-google-tests/
+- api_tests
+- pages
+- tests
+- utils
+- reports
+- logs
+- conftest.py
+- requirements.txt
+- README.md
 
-⚙️ Setup Instructions
-1️⃣ Clone the repository
-git clone https://github.com/andrei-axin/selenium-google-tests.git
-cd selenium-google-tests
-2️⃣ Install dependencies
+▶️ How to Run
+- Install dependencies:
 pip install -r requirements.txt
-3️⃣ Run the tests
+
+- Run all tests:
+python -m pytest
+
+- Run API tests only:
+python -m pytest api_tests
+
+- Generate HTML report
 python -m pytest --html=reports/report.html --self-contained-html
 
-After the test completes, open reports/report.html in your browser to view the HTML test report.
+🔌 API Testing Notes
+- API tests cover CRUD operations
+- Includes negative testing scenarios
+- Uses mock APIs (dummyjson)
+- Test expectations are aligned with mock API behavior
 
-🧩 Test Scenario
-Step	Description
-1.	    Open Chrome browser and navigate to google.com
-2.	    Accept cookies (if popup is displayed)
-3.	    Wait until the search box becomes visible
-4.	    Enter text "Selenium Python" and press ENTER
-5.	    Validate that the resulting page title contains the word "Selenium"
-6.	    Close the browser
+👤 Author
+Andrei Axin
+GitHub: https://github.com/andrei-axin

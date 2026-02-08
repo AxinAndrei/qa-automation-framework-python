@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Pytest cache
+.pytest_cache/
+
+# Logs
+logs/
+*.log
+
+# Reports & screenshots
+reports/*.html
+reports/screenshots/
+reports/assets/
+
+# OS / IDE
+.vscode/
+.idea/
